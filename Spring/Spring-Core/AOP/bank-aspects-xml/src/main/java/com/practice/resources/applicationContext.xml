@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"> <!-- bean definitions here -->
+	
+		<bean class="com.praxtice.serives.BankService" id="BankTransId"> </bean>
+			
+		<bean class="com.wizard.aspects.LoggingAspects" id="LoggingAspectId"></bean>
+		
+		<bean class="com.praxtice.serives.AtmServices" id="AtmServId"></bean>
+		
+		<bean class="com.wizard.aspects.SecurityAspects" id="SecurityAspectId"></bean>
+		
+			<aop:config>
+			
+			<aop:aspect ref="LoggingAspectId">
+				<aop:pointcut expression="execution(* com.praxtice.serives.BankService.*(..))" id="btLogin"/>
+				<aop:before method="myBeforeMethod" pointcut-ref="btLogin"/>
+			</aop:aspect>
+			
+			<aop:aspect ref="SecurityAspectId">
+				<aop:pointcut expression="execution(* com.praxtice.serives.AtmServices.*(..))" id="AtmLogin"/>
+				<aop:pointcut expression="execution(* com.praxtice.serives.BankService.initiateWalletTransaction())" id="btLogin2"/>
+				<aop:before method="provideSecurity" pointcut-ref="AtmLogin"/>
+				<aop:before method="provideSecurity" pointcut-ref="btLogin2"/>
+			</aop:aspect>
+	
+		</aop:config>
+	
+</beans>	

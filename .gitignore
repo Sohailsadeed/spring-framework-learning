@@ -1,0 +1,10 @@
+# Eclipse workspace junk
+.metadata/
+
+# Maven build
+**/target/
+
+# Eclipse project files
+**/.settings/
+**/.classpath
+**/.project

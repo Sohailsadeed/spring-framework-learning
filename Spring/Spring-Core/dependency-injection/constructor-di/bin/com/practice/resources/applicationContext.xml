@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="com.practice.beans.Address" id="address">
+    	<constructor-arg value="127"></constructor-arg>
+    	<constructor-arg value="Godavrikhani"></constructor-arg>
+    	<constructor-arg value="505209"></constructor-arg>
+    </bean>
+    
+     <bean class="com.practice.beans.Address" id="addrId" autowire-candidate="false">
+    	<constructor-arg value="525"></constructor-arg>
+    	<constructor-arg value="Hyderabad"></constructor-arg>
+    	<constructor-arg value="500075"></constructor-arg>
+    </bean>
+    
+    
+    <bean class="com.practice.beans.Subjects" id="subjId">
+    	<constructor-arg name="subj">	
+    	<list>
+    		<value>C++</value>
+    		<value>Java</value>
+    		<value>Python</value>
+    		<value>C#</value>
+    	</list>
+    	</constructor-arg>
+    </bean>
+    
+    <bean class="com.practice.beans.Student" id="stdId" autowire="constructor">
+    	<constructor-arg value="307" index="0"></constructor-arg>
+    	<constructor-arg value="Sohail" index="1"></constructor-arg>
+    	<constructor-arg ref="subjId" index="3"></constructor-arg>
+    </bean>
+</beans>
