@@ -1,0 +1,9 @@
+INDEX VERSION 1.134
+C:\Users\User\eclipse-workspace\Spring\Spring-WEB-MVC\Exceptions\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\397661772.index
+\MncExcep\src\main\java
+C:\Users\User\eclipse-workspace\Spring\Spring-WEB-MVC\Exceptions\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1977423578.index
+\MncExcep\src\main\java
+C:\Users\User\eclipse-workspace\Spring\Spring-WEB-MVC\Exceptions\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\726217899.index
+\Demo\src\main\resources
+C:\Users\User\eclipse-workspace\Spring\Spring-WEB-MVC\Exceptions\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3113733825.index
+\MncExcep\src\main\resources

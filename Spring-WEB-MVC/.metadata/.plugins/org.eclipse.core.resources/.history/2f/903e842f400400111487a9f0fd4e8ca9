@@ -1,0 +1,15 @@
+package com.practice.configurations;
+
+import org.springframework.web.WebApplicationInitializer;
+
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+
+public class WebInitializer implements WebApplicationInitializer{
+
+	@Override
+	public void onStartup(ServletContext servletContext) throws ServletException {
+		
+	}
+		
+}

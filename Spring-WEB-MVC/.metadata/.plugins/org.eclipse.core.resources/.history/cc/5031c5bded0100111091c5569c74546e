@@ -1,0 +1,24 @@
+package com.practice.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.practice.exceptions.LessAgeException;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@Controller
+public class MyController {
+	
+	@GetMapping("/aaa")
+	public String serveRequest(HttpServletRequest req) {
+		String agestr=req.getParameter("age");
+		int age=Integer.parseInt(agestr);
+		
+		if(age<18)
+			throw new LessAgeException("Sorry, you cannot vote as you are a minor");
+		else
+			return "hello";
+	}
+}

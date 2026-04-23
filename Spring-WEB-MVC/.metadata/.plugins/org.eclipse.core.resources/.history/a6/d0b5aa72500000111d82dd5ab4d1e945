@@ -1,0 +1,7 @@
+<html>
+<body>
+	<form action="getName" method="POST">
+		<input type="text" name="name1">
+	</form>
+</body>
+</html>

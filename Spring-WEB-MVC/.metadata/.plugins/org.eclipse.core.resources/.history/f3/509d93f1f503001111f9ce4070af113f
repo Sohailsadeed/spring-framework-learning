@@ -1,0 +1,8 @@
+<%@ page isELIgnored="false" %>
+<html>
+<body>
+	 status: ${file_status} <br> <br>
+	
+</body>
+</html>
+	

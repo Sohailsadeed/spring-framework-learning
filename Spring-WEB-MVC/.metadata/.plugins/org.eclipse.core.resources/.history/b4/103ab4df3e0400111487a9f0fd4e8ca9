@@ -1,0 +1,6 @@
+package com.practice.configurations;
+
+@Config
+public class WebConfig {
+
+}

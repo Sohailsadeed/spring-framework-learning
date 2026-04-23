@@ -1,0 +1,10 @@
+<%@ page isELIgnored="false" %>
+<html>
+<body>
+	Name: ${name} <br> <br>
+	Email: ${email} <br> <br>
+	ResumeStatus: $
+	
+</body>
+</html>
+	

@@ -1,0 +1,40 @@
+package com.practice.resources;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+import com.practice.beans.Items;
+
+@Configuration
+public class SpringConfigFile {
+	@Bean
+	public DriverManagerDataSource createDataSource() {
+		
+		DriverManagerDataSource dataSource=new DriverManagerDataSource();
+		
+		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/spring_jdbc");
+		dataSource.setUsername("root");
+		dataSource.setPassword("7867");
+		
+		return dataSource;
+	}
+	
+	@Bean("templateId")
+	public JdbcTemplate createTemplate() {
+		JdbcTemplate template= new JdbcTemplate(createDataSource());
+		return template;
+	}
+	
+	@Bean("itemId")
+	public Items createItem() {
+		Items item=new Items();
+		item.setItemId(112);
+		item.setItemName("TouchPen");
+		item.setItemPrice(8999);
+		
+		return item;
+	}
+}

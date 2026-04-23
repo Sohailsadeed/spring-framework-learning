@@ -1,0 +1,10 @@
+package com.practice.exceptions;
+
+public class LessAgeException extends Exception{
+	public LessAgeException() {
+		super();
+	}
+	public LessAgeException(String message) {
+		super(message);
+	}
+}

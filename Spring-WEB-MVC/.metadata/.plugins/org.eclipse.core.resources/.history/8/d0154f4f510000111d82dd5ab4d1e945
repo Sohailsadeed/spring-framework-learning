@@ -1,0 +1,6 @@
+<% page isELIgnored="false"; %>
+<html>
+<body>
+	<h1>Hello ${model_name}</h1>
+</body>
+</html>

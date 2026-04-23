@@ -1,0 +1,9 @@
+<html>
+<body>
+	<form action="">
+		Enter Age: <input type="text" name="age"> <br> <br>
+		<input type=''>
+		
+	</form>
+</body>
+</html>

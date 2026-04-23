@@ -1,0 +1,7 @@
+<%@page import="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"%>
+<html>
+<body>
+<a href="demo">Click here</a>
+</body>
+</html>
+<% BeanNameUrlHandlerMapping %>

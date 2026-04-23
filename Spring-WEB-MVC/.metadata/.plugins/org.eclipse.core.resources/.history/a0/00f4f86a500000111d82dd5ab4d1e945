@@ -1,0 +1,7 @@
+<html>
+<body>
+	<form action="getN">
+		<input type="text" name="name1">
+	</form>
+</body>
+</html>

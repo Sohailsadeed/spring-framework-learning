@@ -1,0 +1,18 @@
+package com.practice.configurations;
+
+import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+
+public class WebInitializer implements WebApplicationInitializer{
+
+	@Override
+	public void onStartup(ServletContext servletContext) throws ServletException {
+		AnnotationConfigWebApplicationContext webAppContext = new AnnotationConfigWebApplicationContext();
+		webAppContext.register(WebConfig.class);
+		webAppContext
+	}
+		
+}

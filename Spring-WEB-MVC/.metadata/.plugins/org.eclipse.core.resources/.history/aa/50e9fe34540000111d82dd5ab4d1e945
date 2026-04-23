@@ -1,0 +1,7 @@
+<%@ page isELIgnored="false" %>
+<html>
+<body>
+	<h1>Hello ${mav_details["name"]}</h1>
+	<h1></h1>
+</body>
+</html>
